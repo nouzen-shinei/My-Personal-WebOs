@@ -81,6 +81,25 @@ npm run build
 npm run preview
 ```
 
+## Deploy to GitHub Pages
+
+This repo includes an automated Pages workflow at `.github/workflows/deploy-pages.yml`.
+
+1. Push this project to a GitHub repository.
+2. Ensure your default branch is `main` (or update the workflow branch trigger).
+3. In GitHub, open **Settings > Pages**.
+4. Set **Source** to **GitHub Actions**.
+5. Push to `main` and wait for the **Deploy RingOs to Pages** workflow to finish.
+
+Your app will be available at:
+
+- `https://<your-username>.github.io/<your-repo-name>/`
+
+Notes:
+
+- `vite.config.ts` automatically sets the correct `base` path in GitHub Actions builds.
+- Local development still runs at root (`/`) with `npm run dev`.
+
 ## Notes
 
 - RingOs session persists in local storage under `ringos.session.v1`.
